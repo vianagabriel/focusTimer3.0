@@ -198,7 +198,11 @@ body.active{
 
 @media(max-width: 450px){
 
- 
+  .toggle{
+    position: fixed;
+    top: 2rem;
+    right: 6rem;
+  }
  main{
   min-height: 100vh;
   margin: 0 auto;
