@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
+*{
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+:root{
+  --bg-color: #fff;
+  --base-color: 194;
+  --primary-color: hsl(var(--base-color), 10%, 63%);
+  --primary-color-light: hsla(var(--base-color), 10%, 63%, 0.23);
+  --text-color: #323238;
+
+  font-size: 62.5%;
+}
+
+
+
+body{
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'Roboto', sans-serif;
+  transition: 500ms;
+  
+}
+
+.toggle{
+  position: fixed;
+  top: 6rem;
+  right: 6rem;
+}
+
+main{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 19.2rem;
+  margin-block: 15rem;
+  margin-inline: 23.3rem;
+}
+
+main .cards{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem ;    
+}
+
+.cardFlorest{
+  position: absolute;
+  
+}
+
+.volume{
+  position: relative;
+  top: 12.5rem;
+  left: 2rem;
+  
+}
+.input-range,
+.input-rangeRain,
+.input-rangeCoffe,
+.input-rangeFire{
+  width: 10rem;
+  height: .4rem;
+  border-radius: .5rem;
+  outline: none;
+  -webkit-appearance: none;
+  background-color: #000000;
+}
+ 
+
+.slider-container .input-range::-webkit-slider-thumb,
+.input-rangeRain::-webkit-slider-thumb,
+.input-rangeCoffe::-webkit-slider-thumb,
+.input-rangeFire::-webkit-slider-thumb{
+  -webkit-appearance: none;
+   width:1.4rem;
+   height: 1.4rem;
+   background-color: rgb(255, 255, 255);
+   border-radius: 50%;
+   outline: none;
+   cursor: pointer;
+   
+}
+.cardRain{
+  position: relative;
+}
+
+.volumeRain{
+  position: relative;
+  bottom: 3rem;
+  left: 2rem;
+  
+
+}
+
+
+  
+.volumeCoffe,
+.volumeFire{
+  position: relative;
+  left: 2rem;
+  bottom: 3rem;
+}
+
+.cards svg{
+  
+  transition: 500ms;
+}
+  
+.cards svg:hover{
+  transform: scale(1.1);
+}
+ 
+
+svg > path{
+  transition: .5s;
+}
+.cards svg path:nth-child(1):hover{
+  fill: #8ddbf3;
+}
+  
+
+.timer{
+  font-size: 10rem;
+  display: flex;
+  margin-bottom: 1.6rem;
+}
+
+.controls{
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+
+  
+}
+
+
+button{
+  background-color: transparent;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+}
+
+.sound-off img{
+  background-color: #323238;
+}
+
+
+.hide{
+  display: none;
+  
+}
+
+
+body.active{
+  background-color: black;
+  transition: 500ms;
+}
+
+.timer.active{
+  color: #fff;
+}
+
+.controls.active svg path{
+  fill: #C4C4CC;
+}
+
+.cards.active svg path{
+  fill: #5d5d5f;
+}
+
+.cards.active svg path + path{
+  fill: #fff
+}
+
+.volume.active svg fill{
+  fill: #fff;
+}
+  
+@media(max-width: 1280px){
+  main{
+    margin-top: 25rem;
+  }
+}
+
+@media(max-width: 850px){
+  main{
+    display: flex;
+    flex-direction: column;
+    margin-top: 5rem;
+    gap: 5rem;
+  }
+}
+
+@media(max-width: 450px){
+
+ 
+ main{
+  min-height: 100vh;
+  margin: 0 auto;
+  margin-top: 5rem;
+  margin-bottom: 10rem;
+  
+ }
+
+ 
+
+
+}
